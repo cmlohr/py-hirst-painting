@@ -38,12 +38,12 @@ def color_changer():
     return choice
 
 
-def dots(tom, num_dots, dot_length):
+def dots(tom, num_dots, dot_jump):
     for i in range(num_dots):
         tom.penup()
         tom.color(color_changer())
         tom.dot(20)
-        tom.forward(dot_length)
+        tom.forward(dot_jump)
 
 
 row = 0
@@ -51,14 +51,6 @@ while row != 10:
     row += 1
     dots(tom, 10, 1)
     tom.setpos(0, row)
-
-
-
-
-
-
-
-
 
 screen = Screen()
 screen.exitonclick()
